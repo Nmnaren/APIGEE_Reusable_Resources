@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="3" name="SF-InitialCheck">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1545710455489</CreatedAt>
+    <CreatedBy>priniren@gmail.com</CreatedBy>
+    <Description>Reusable shared flow for basic security &amp; rate limiting checks</Description>
+    <DisplayName>SF-InitialCheck</DisplayName>
+    <LastModifiedAt>1545812468872</LastModifiedAt>
+    <LastModifiedBy>priniren@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:95c918915c2d9e6e2c10d7f03e8502281f9140254be85c3da03a3c9db7694c7f9bd9c5d06dc61a9c67ea8c7fb6e408a7db1cc13063f0e2c1c45921a44658c35f</ManifestVersion>
+    <Policies>
+        <Policy>JS.CreateMessageId</Policy>
+        <Policy>RE.RegExCheck</Policy>
+        <Policy>RF.AccessDenied</Policy>
+        <Policy>RF.BadRequest</Policy>
+        <Policy>RF.MethodNodAllowed</Policy>
+        <Policy>SA.RateLimit</Policy>
+        <Policy>VK.VerifyAPIKey</Policy>
+    </Policies>
+    <Resources>
+        <Resource>jsc://JS-CommonUtils.js</Resource>
+        <Resource>jsc://JS-GenerateMessageId.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

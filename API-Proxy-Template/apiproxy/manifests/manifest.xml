@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AM.Error.AccessDenied" version="SHA-512:99261e28ec5358c47274fa0c97f10f63254101c2f4323d038230a9a6984ed4195b06d809df0f80225d2abd3d6fce07a60475a72b5daf10538a84905960d3c3de"/>
+        <VersionInfo resourceName="AM.Error.ConstructResponse" version="SHA-512:3083f231be8ecd1fd23b03907fe13d7ef8ba4c860404a3bd1c3ea160729126cd599ba7fe71c072b2ad24e8f81bab52f65ef68f4cd226acc94e2ea1fd5bd545ab"/>
+        <VersionInfo resourceName="AM.Error.GatewayTimeout" version="SHA-512:e4a7f360049a0dcd5e418cc5db5e1ed07377f1b18954d026e3f6e13eb5e8fda111ad9e98542c93870baf42835ffa958cd6a22841bea63587530a7563599f96c4"/>
+        <VersionInfo resourceName="AM.Error.Generic" version="SHA-512:75a480c5a7885a3e2b78342f19564a9f7ed33f35c2480ec43d970ce7316c7f5de4d0a2c9d5d1919379f52ca85a0193f4698b3a17f04a880f13d4cd760a620367"/>
+        <VersionInfo resourceName="AM.Error.InvalidInput" version="SHA-512:a39b135d74a5e448b271fca8fe619fbe019bfca8a9b7a21d523eea07b4db21407b207b1e257725508670309ef3c201b75de356ee5771aa54e247f194e66adc77"/>
+        <VersionInfo resourceName="AM.Error.Invalidtoken" version="SHA-512:ce59cd6b6cc00dad7ca25433b687493c810272ae1c0781fa3fd45c543bea1935080c13e8ed67d82e534ec392855b01bc6e6f807873a07e7d586a6d9ead2afa3f"/>
+        <VersionInfo resourceName="AM.Error.MethodNotAllowed" version="SHA-512:82829a683c85e938b9659198e27a52b6157e1ae060794d70e256451dcdabee22cb6bb9cb11bc905fa83ecb74dd5c238ce4dd5788265a965bb9bb1100ae2b57dc"/>
+        <VersionInfo resourceName="AM.Error.ResourceNotFound" version="SHA-512:7af4ee6dd97345aca62b00c0feed9fe3182726501b20837cc51abac726b2d607be685f551a158de7738d3e8f4819120b8e51b373995d6d643faa8af34bc01c6d"/>
+        <VersionInfo resourceName="AM.Error.ScriptExecutionFailed" version="SHA-512:809b8a79702bd84e7bf6a1b579938e564416592ab8301f904d2fc91d974f572ec46233586fe9c14a96526b3e248d8a177b9ead5d60ae3386611fe4c7eb75f877"/>
+        <VersionInfo resourceName="AM.Error.ServiceUnavailable" version="SHA-512:2679c644473c618b7869de841cba1c6a35fa8eefaf3e2b89e02a0f3b4e25316907c57058d7619edf15432c95b4cb8c502e2882d38af69f0334d35016404e6fdc"/>
+        <VersionInfo resourceName="AM.Error.SpikeArrestViolation" version="SHA-512:3db9c3b6dfd343cab5e7a33163a13283dbcb1faaa7b975e008dfb71a59adceff19d8ed1e685190db323919776cc9c38f62c7905da20ec7411ababe324c5a3f3e"/>
+        <VersionInfo resourceName="AM.Error.ThreatDetected" version="SHA-512:1e3549097be91f010bf38e26c25fbb20ce1a86fbd068957ead4a2c88cd22e84b27460216652652b17801e96a5ad66d89bc5e50273fed99b3c0f4be7219605ef8"/>
+        <VersionInfo resourceName="AM.Req.Proxy.SaveParams" version="SHA-512:9842f671ddaadc01ad8cedfd4184b8358118eefe640c5e4f7de4dccb8dce0df6a5b103f68e50a86a460c77580f0922c7e1884cbe2df32bc039914bb3e0d75ffe"/>
+        <VersionInfo resourceName="AM.Req.RemoveAuthHeaders" version="SHA-512:526f32e74906ed6384a203501bd3e0d50225c121df6e2af865cade301204defc39ed83de0e55f5e45d454e03b53ef38a375310f8b660d794eac5a33feb9d5f6f"/>
+        <VersionInfo resourceName="AM.Req.Target.SaveParams" version="SHA-512:d85e6264206a17a12d96aab276ce77a82860c7f430b8141fdad7f6d39d9ec729f8c37f1c5c6ef5bb9a6f33085a73ca9a8f5218b4541388c813ede4bb458328d3"/>
+        <VersionInfo resourceName="AM.Resp.SetCorsHeaders" version="SHA-512:05ff4b5b634f41cbc3d81eeae415408c2e12ed7747386d523f949ef581c7085efa03e7f56575db9060044b6413c181489f3f100867d99f035e27f2a809fd2b03"/>
+        <VersionInfo resourceName="EV.Request" version="SHA-512:5ab934169eac6f7bf20c80db90797fcfc9f15f4aeabeadd655ba4889595428e5d924c669f223d794595665e3be3b090c6cafc019635a9c3255b5220fee00fa47"/>
+        <VersionInfo resourceName="FC.Logger" version="SHA-512:5f6412bfc6ffc565e2c79c7a1d28ee1b0ff779efa696bc2e3611b4a0cfb5f36dd67dca041bda93b309808daa26dfb17282f741a5d0b1e2933c56a2bf4a463c93"/>
+        <VersionInfo resourceName="FC.PreChecks" version="SHA-512:e44cc1dfd14d8f3087d8d7656f5b932367e6e20274b6950c977bba55b9ac87b41a04659134883b03aedcfbc516e143c3c39c8cf9a3986d52214da201f867e87b"/>
+        <VersionInfo resourceName="FC.SecurityCheck" version="SHA-512:5b192d8aced538235140621e2ae97370f4016606b88593864479ead2d33368c8c7c15bfc69d2269560094f7de6f09e80b4d7c925e085120795692ef70060376a"/>
+        <VersionInfo resourceName="JS.ConstructError" version="SHA-512:e209114dcec6b03752d98aa2d41c964c66fb35f0e9ee9bdc28938d0e69e11118cf70942dfbbf66d1d2642af37081e76ecd91ef69891d6fc7b3c9ce00a281ca5a"/>
+        <VersionInfo resourceName="JS.ConstructRequest" version="SHA-512:dab9ed08aa7d39ff5ace72ce7f3e895ba67e718c84baee3c12bbe1e0771d13494b8c82a5639c5cd12f2944a794eab312c24ba610f9ad840521d2e08135773dc2"/>
+        <VersionInfo resourceName="JS.ConstructResponse" version="SHA-512:4a7d5e6c5392771e75e4d5959a18955170549892c896bc228fd0dec424b1ca1e633bb25ae8a31a602f3fc708830bbaeaecfcb35959ba23bb2afd0db1950a81fa"/>
+        <VersionInfo resourceName="JS.SetContextFlow" version="SHA-512:8d10f9197fbe8b4392e0793510e3c83d6c1fa5f1c0af8472db33f8bb854986e7556db658b8b80226ccdfbaea635a91dcccb34303887aa46babddd72ac7f2a667"/>
+        <VersionInfo resourceName="JS.ValidateInput" version="SHA-512:5b1a79dd445045121086e7ab3cd0067a30b3141177a4dd490580c332e9e4392ced2a26de384108170169161ecb947e3e79d4242952be2a91429bdc580dfcb535"/>
+        <VersionInfo resourceName="RF.BadRequest" version="SHA-512:0bb4eb12928925b8d277650e39938c421402ea86424ac846893f7537a4224201f705796c541b1aaff4e3008d5d47713a676dead1888cf294f05be4faf5f13546"/>
+        <VersionInfo resourceName="RF.ResourceNotFound" version="SHA-512:af911cf538c9b0fb833c5ca638aacac6b5e6b52a44c6a53fccbdcfade9a8fd5683024ee9732e4b2a03f05355fbeebd3281a840aecc31001af566e2ddf5bf5af4"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:d3a1ac573038040789821407cb402047208070d1ca36e6922430eb7ef268c98cf55ff1b56a5c4e1fe8f29caa4aa6c8ff0b1ab473d065dc58031afcf925c7097b"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="jsc://JS-CommonUtils.js" version="SHA-512:a61ef3587a7ee2ba8e2106f2ee8248053a342d499a8af2d632b93e91155ba1e068a13671d00a4cd0c73050c63896aadb723b2f6e5a1aeec554dc3d436b049d0d"/>
+        <VersionInfo resourceName="jsc://JS-ConstructProxyErrorResp.js" version="SHA-512:3d6dd366ec7a8e410a255bc4a1721c60f60895fd478e4eeeedbebc7120b4454c40a9a20cace78f393c62e6c75dafd04eedc3999f697c32d917cbc5b543eff152"/>
+        <VersionInfo resourceName="jsc://JS-ConstructProxyResp.js" version="SHA-512:b3d0e4a79d3bcfcdf68c035266f7dd523bd3de33fd89cab52a25e60845502bcb07290188b2c104a44752c3d70c1000770706ce078a6125ff8b421059c7c0b43c"/>
+        <VersionInfo resourceName="jsc://JS-ConstructTargetReq.js" version="SHA-512:8f3a29ee57d91a40dd2f9f5e94e001ca35ffe81292281db1c3e324fd2c212c7010bef04c7705b712d8b91d4ccaaf8de5a31d5f1bb2f52f9076761c29954faa36"/>
+        <VersionInfo resourceName="jsc://JS-SetContextFlow.js" version="SHA-512:044ccf1e90155298ccc3c0656b2e433b38dd81f33ffa0470a0ba6a51203b32b7ea0485e5089b75e3e5a1c2f1157df083ec397f1b917e71c404a4acc931d75c84"/>
+        <VersionInfo resourceName="jsc://JS-ValidateProxyReq.js" version="SHA-512:6e7ae4840fc9be6b037043841b5b220cbea2ed998912ea1b4d935d3c642dd9a566778d6b0dad06c856aae41ef405d2e069e8fadb13aa316fa3a90395e05e2fd8"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:7fef409f554961595a919d9a98a9cd15c8f207afe717e15fb3722242a4338abc0f8a493d73dbe837ab48e1d399914c1d81ab74a2c3e4be52a0c77f1867cebf34"/>
+    </TargetEndpoints>
+</Manifest>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RegularExpressionProtection async="false" continueOnError="false" enabled="true" name="RE.RegExCheck">
+    <DisplayName>RE.RegExCheck</DisplayName>
+    <Source>request</Source>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <Variable name="request.content">
+        <Pattern ignoreCase="true">((\%3C)|(&lt;))[^\n]+((\%3E)|&gt;)</Pattern>
+        <Pattern ignoreCase="true">([^A-Za-z0-9.,'"{}:\s\-&amp;/@$½()_\[\]\+%#\\]+)</Pattern>
+        <Pattern ignoreCase="true">[\s]*((select )|(delete )|(exec )|(drop\s*table)|(insert )|(shutdown)|(update ))</Pattern>
+    </Variable>
+    <Variable name="request.uri">
+        <Pattern ignoreCase="true">[\s]*((select)|(delete)|(exec)|(drop\s*table)|(insert)|(shutdown)|(update)|(\%3D)|((\%3C)|(&lt;))|((\%3E)|(&gt;)))</Pattern>
+        <Pattern ignoreCase="true">(&amp;#x)</Pattern>
+        <Pattern ignoreCase="true">((\%3C)|(&lt;))[^\n]+((\%3E)|&gt;)</Pattern>
+    </Variable>
+    <Header name="Authorization">
+        <Pattern ignoreCase="true">((\%3C)|(&lt;))[^\n]+((\%3E)|&gt;)</Pattern>
+        <Pattern ignoreCase="true">[\s]*((select)|(delete)|(exec)|(drop\s*table)|(insert)|(shutdown)|(update))</Pattern>
+    </Header>
+</RegularExpressionProtection>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM.Error.ResourceNotFound">
+    <DisplayName>AM.Error.ResourceNotFound</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>flow.err.code</Name>
+        <Value>API-ERR-1011</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.description</Name>
+        <Value>Resource not found</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.httpStatusCode</Name>
+        <Value>404</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.reasonPhrase</Name>
+        <Value>Not Found</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

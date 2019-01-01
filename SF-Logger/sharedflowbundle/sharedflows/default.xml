@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>KVM.GetLogInfo</Name>
+    </Step>
+    <Step>
+        <Name>JS.Logger</Name>
+    </Step>
+    <Step>
+        <Name>RF.JSError</Name>
+        <Condition>(isError=true)</Condition>
+    </Step>
+    <Step>
+        <Name>ML.LogMessage</Name>
+    </Step>
+</SharedFlow>

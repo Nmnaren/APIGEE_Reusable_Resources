@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout name="FC.PreChecks" enabled="false" continueOnError="false" async="false">
+    <DisplayName>FC.PreChecks</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>SF-InitialCheck</SharedFlowBundle>
+</FlowCallout>

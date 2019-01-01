@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description>Default proxy endpoint for account related resources</Description>
+    <FaultRules>
+        <FaultRule name="GenericError">
+            <Step>
+                <Name>AM.Error.Generic</Name>
+            </Step>
+        </FaultRule>
+        <FaultRule name="GatewayTimeout">
+            <Step>
+                <Name>AM.Error.GatewayTimeout</Name>
+            </Step>
+            <Condition>(fault.name = "GatewayTimeout")</Condition>
+        </FaultRule>
+        <FaultRule name="MethodNotAllowed">
+            <Step>
+                <Name>AM.Error.MethodNotAllowed</Name>
+            </Step>
+            <Condition>(fault.name = "RaiseFault") and (error.content = "Method Not Allowed")</Condition>
+        </FaultRule>
+        <FaultRule name="ResourceNotFound">
+            <Step>
+                <Name>AM.Error.ResourceNotFound</Name>
+            </Step>
+            <Condition>(fault.name = "RaiseFault") and (error.content = "Resource Not Found")</Condition>
+        </FaultRule>
+        <FaultRule name="InvalidInput">
+            <Step>
+                <Name>AM.Error.InvalidInput</Name>
+            </Step>
+            <Condition>(fault.name = "RaiseFault") and (error.content = "Bad Request")</Condition>
+        </FaultRule>
+        <FaultRule name="AccessDenied">
+            <Step>
+                <Name>AM.Error.AccessDenied</Name>
+            </Step>
+            <Condition>((fault.name = "RaiseFault") and (error.content = "Access Denied")) or (error.status.code = 401)</Condition>
+        </FaultRule>
+        <FaultRule name="InvalidApiKey">
+            <Step>
+                <Name>AM.Error.AccessDenied</Name>
+            </Step>
+            <Condition>(fault.name = "InvalidApiKey") or (fault.name = "InvalidApiKeyForGivenResource")</Condition>
+        </FaultRule>
+        <FaultRule name="InvalidJwtToken">
+            <Step>
+                <Name>AM.Error.AccessDenied</Name>
+            </Step>
+            <Condition>(jwt.JWT-VerifyToken.failed = true)</Condition>
+        </FaultRule>
+        <FaultRule name="InvalidToken">
+            <Step>
+                <Name>AM.Error.Invalidtoken</Name>
+            </Step>
+            <Condition>(fault.name = "RaiseFault") and (error.content = "Invalid token")</Condition>
+        </FaultRule>
+        <FaultRule name="ScriptExecutionFailed">
+            <Step>
+                <Name>AM.Error.ScriptExecutionFailed</Name>
+            </Step>
+            <Condition>(fault.name = "ScriptExecutionFailed")</Condition>
+        </FaultRule>
+        <FaultRule name="ThreatDetected">
+            <Step>
+                <Name>AM.Error.ThreatDetected</Name>
+            </Step>
+            <Condition>(fault.name = "ThreatDetected")</Condition>
+        </FaultRule>
+        <FaultRule name="SpikeArrestViolation">
+            <Step>
+                <Name>AM.Error.SpikeArrestViolation</Name>
+            </Step>
+            <Condition>(fault.name = "SpikeArrestViolation")</Condition>
+        </FaultRule>
+    </FaultRules>
+    <DefaultFaultRule name="DefaultFault">
+        <AlwaysEnforce>true</AlwaysEnforce>
+        <Step>
+            <Name>JS.SetContextFlow</Name>
+        </Step>
+        <Step>
+            <Name>JS.ConstructError</Name>
+        </Step>
+        <Step>
+            <Name>AM.Error.ConstructResponse</Name>
+        </Step>
+        <Step>
+            <Name>AM.Resp.SetCorsHeaders</Name>
+        </Step>
+        <Step>
+            <Name>FC.Logger</Name>
+        </Step>
+    </DefaultFaultRule>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>AM.Req.Proxy.SaveParams</Name>
+            </Step>
+            <Step>
+                <Name>FC.PreChecks</Name>
+            </Step>
+            <Step>
+                <Name>FC.SecurityCheck</Name>
+            </Step>
+            <Step>
+                <Name>JS.SetContextFlow</Name>
+            </Step>
+            <Step>
+                <Name>FC.Logger</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows>
+        <Flow name="Resource2">
+            <Description>functional flow - sample for POST</Description>
+            <Request>
+                <Step>
+                    <Name>EV.Request</Name>
+                </Step>
+                <Step>
+                    <Name>JS.ValidateInput</Name>
+                </Step>
+                <Step>
+                    <Name>RF.BadRequest</Name>
+                    <Condition>(flow.err.isError = true)</Condition>
+                </Step>
+                <Step>
+                    <Name>JS.ConstructRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>JS.ConstructResponse</Name>
+                </Step>
+                <Step>
+                    <Name>AM.Error.ConstructResponse</Name>
+                    <Condition>(flow.err.isError = true)</Condition>
+                </Step>
+            </Response>
+            <Condition>(flow.proxy.requestVerb = "POST") and (proxy.pathsuffix Matches "/resource2")</Condition>
+        </Flow>
+        <Flow name="Resource1">
+            <Description>functional flow - sample for GET</Description>
+            <Request>
+                <Step>
+                    <Name>RF.BadRequest</Name>
+                    <Condition>(request.queryparam.param1 Equals null) or (request.queryparam.param1 = "")</Condition>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>JS.ConstructResponse</Name>
+                </Step>
+                <Step>
+                    <Name>AM.Error.ConstructResponse</Name>
+                    <Condition>(flow.err.isError = true)</Condition>
+                </Step>
+            </Response>
+            <Condition>(flow.proxy.requestVerb = "GET") and (proxy.pathsuffix Matches "/resource1")</Condition>
+        </Flow>
+        <Flow name="PreflightOptionsRequest">
+            <Description>Resource to test preflight CORS request</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/**") and (flow.proxy.requestVerb = "OPTIONS")</Condition>
+        </Flow>
+        <Flow name="UnknownResource">
+            <Description>Default catch all block</Description>
+            <Request>
+                <Step>
+                    <Name>RF.ResourceNotFound</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request>
+            <Step>
+                <Name>AM.Req.RemoveAuthHeaders</Name>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <Name>AM.Resp.SetCorsHeaders</Name>
+            </Step>
+            <Step>
+                <Name>JS.SetContextFlow</Name>
+            </Step>
+            <Step>
+                <Name>FC.Logger</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <PostClientFlow>
+        <Request/>
+        <Response/>
+    </PostClientFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/proxybasepath</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+        <VirtualHost>default</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="NoRoute">
+        <!-- Do not call the target for option request for CORS-->
+        <Condition>(flow.proxy.requestVerb = "OPTIONS") or (flow.skiptarget = true)</Condition>
+    </RouteRule>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

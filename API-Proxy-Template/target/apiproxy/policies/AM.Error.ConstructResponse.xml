@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM.Error.ConstructResponse">
+    <DisplayName>AM.Error.ConstructResponse</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+            @flow.err.errorResponse#
+        </Payload>
+        <StatusCode>{flow.err.httpStatusCode}</StatusCode>
+        <ReasonPhrase>{flow.err.reasonPhrase}</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

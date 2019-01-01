@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="JS.Logger" version="SHA-512:e29334184a3a5f7a2657385c04e71314a753203dedbf8043f922e27e8bfc5acf0a26a34be5c50dcf5b0a447ebe9556d6230cc7f9ada8ce55a7503084de07113a"/>
+        <VersionInfo resourceName="KVM.GetLogInfo" version="SHA-512:0dd86766eddfd47442bb37b9177196b09d7345d83a3e4e9c94432cdb7115a2b29979271c878f69f8a46953099f2165588339cae2e44c8b64578b2e36ac989c92"/>
+        <VersionInfo resourceName="ML.LogMessage" version="SHA-512:b5eaab5fe791c9eae54dcff1fbcb1c9bd3455907e4e30dee5a3ad3b43a24c971ab7d51084b6f76cffdb97b914239599b55540c20da0ae0a7d5de1589a88c832f"/>
+        <VersionInfo resourceName="RF.JSError" version="SHA-512:ef8a27658ead27fe2e4e0871cd005b89d3b68843c5be1bf73e5c4af5871cc50197dc138cb0b901572a3fe5e862719a86c53674e3bc24715657496d6a95ccc39a"/>
+    </Policies>
+    <ProxyEndpoints/>
+    <Resources>
+        <VersionInfo resourceName="jsc://JS-Logger.js" version="SHA-512:84a6abd4049f7dc5dd23aaa1c781472eb8c575ac25ae025790049fe71cbc5fe173c822777b369318781d2696772294691fb5543adb10b34ededbfa5775edef9a"/>
+    </Resources>
+    <SharedFlows>
+        <VersionInfo resourceName="default" version="SHA-512:2b8a30e5dd2626706d94eaf9abf4a7e8ee2860ea9a27b889edc20d69056f1c9a6b502cf6918463294f9a64cef92347590ea34e9988bca0bb517852f91c8cdc99"/>
+    </SharedFlows>
+    <TargetEndpoints/>
+</Manifest>

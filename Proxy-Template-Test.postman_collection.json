@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "09abfd69-4431-42d4-8e9a-dbbd366df019",
+		"name": "Proxy-Template-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Success - Resource1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "tJcK5FhwnDHC04nf0rG7fFhdO5cP7IBm",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IktleSJ9.eyJjb25zdW1lcklkZW50aWZpZXIiOiJBcHAxIiwidXNlcklkIjoiZGlwYW5rYXIuYWljaEBtaW5kdHJlZS5jb20iLCJhY3RvciI6IkZBIn0._bykd1mlkvWA5vjjnTJctFrgvKnAxyAj6ydv4OnFH_E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Dipankar\",\n\t\"lastName\": \"Aich\"\n}"
+				},
+				"url": {
+					"raw": "https://dipankaraich-eval-test.apigee.net/v1/proxybasepath/resource1",
+					"protocol": "https",
+					"host": [
+						"dipankaraich-eval-test",
+						"apigee",
+						"net"
+					],
+					"path": [
+						"v1",
+						"proxybasepath",
+						"resource1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

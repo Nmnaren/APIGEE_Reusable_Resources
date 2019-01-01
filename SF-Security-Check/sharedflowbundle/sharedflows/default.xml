@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>KVM.ReadSecConfig</Name>
+        <Condition>(request.verb != "OPTIONS") and (proxy.basepath Not Matches "/**/common/security") and (proxy.basepath Not Matches "/**/common/util")</Condition>
+    </Step>
+    <Step>
+        <Name>EV.SecurityParams</Name>
+        <Condition>(request.verb != "OPTIONS") and (proxy.basepath Not Matches "/**/common/security") and (proxy.basepath Not Matches "/**/common/util")</Condition>
+    </Step>
+    <Step>
+        <Name>RF.InvalidToken</Name>
+        <Condition>(request.verb != "OPTIONS") and ((flow.sf.sec.accessToken = null) or (flow.sf.sec.accessToken = ""))</Condition>
+    </Step>
+    <Step>
+        <Name>JWT.VerifyToken</Name>
+        <Condition>(request.verb != "OPTIONS") and (proxy.basepath Not Matches "/**/common/security") and (proxy.basepath Not Matches "/**/common/util")</Condition>
+    </Step>
+    <Step>
+        <Name>RF.InvalidToken</Name>
+        <Condition>(request.verb != "OPTIONS") and (proxy.basepath Not Matches "/**/common/security") and (proxy.basepath Not Matches "/**/common/util") and (jwt.JWT-VerifyToken.claim.consumerIdentifier = null) or (jwt.JWT-VerifyToken.claim.consumerIdentifier = "")</Condition>
+    </Step>
+</SharedFlow>

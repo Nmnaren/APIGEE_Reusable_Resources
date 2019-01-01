@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="API-Proxy-Template">
+    <Basepaths>/v1/us/common/accountoptions</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1545710932788</CreatedAt>
+    <CreatedBy>priniren@gmail.com</CreatedBy>
+    <Description>A</Description>
+    <DisplayName>API-Proxy-Template</DisplayName>
+    <LastModifiedAt>1545710932788</LastModifiedAt>
+    <LastModifiedBy>priniren@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:71cb6f3dddb6c90415076817e26002e84c4554b4e346557a806710dd1a375f35d225e22c98f1e88e08095b601c65001dd83e77b6b1b9863812e6350975af77ac</ManifestVersion>
+    <Policies>
+        <Policy>AM.Error.AccessDenied</Policy>
+        <Policy>AM.Error.ConstructResponse</Policy>
+        <Policy>AM.Error.GatewayTimeout</Policy>
+        <Policy>AM.Error.Generic</Policy>
+        <Policy>AM.Error.InvalidInput</Policy>
+        <Policy>AM.Error.Invalidtoken</Policy>
+        <Policy>AM.Error.MethodNotAllowed</Policy>
+        <Policy>AM.Error.ResourceNotFound</Policy>
+        <Policy>AM.Error.ScriptExecutionFailed</Policy>
+        <Policy>AM.Error.ServiceUnavailable</Policy>
+        <Policy>AM.Error.SpikeArrestViolation</Policy>
+        <Policy>AM.Error.ThreatDetected</Policy>
+        <Policy>AM.Req.Proxy.SaveParams</Policy>
+        <Policy>AM.Req.RemoveAuthHeaders</Policy>
+        <Policy>AM.Req.Target.SaveParams</Policy>
+        <Policy>AM.Resp.SetCorsHeaders</Policy>
+        <Policy>EV.Request</Policy>
+        <Policy>FC.Logger</Policy>
+        <Policy>FC.PreChecks</Policy>
+        <Policy>FC.SecurityCheck</Policy>
+        <Policy>JS.ConstructError</Policy>
+        <Policy>JS.ConstructRequest</Policy>
+        <Policy>JS.ConstructResponse</Policy>
+        <Policy>JS.SetContextFlow</Policy>
+        <Policy>JS.ValidateInput</Policy>
+        <Policy>RF.BadRequest</Policy>
+        <Policy>RF.ResourceNotFound</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JS-CommonUtils.js</Resource>
+        <Resource>jsc://JS-ConstructProxyErrorResp.js</Resource>
+        <Resource>jsc://JS-ConstructProxyResp.js</Resource>
+        <Resource>jsc://JS-ConstructTargetReq.js</Resource>
+        <Resource>jsc://JS-SetContextFlow.js</Resource>
+        <Resource>jsc://JS-ValidateProxyReq.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

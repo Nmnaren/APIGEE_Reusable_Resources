@@ -1,0 +1,51 @@
+{
+    "version": "1.0",
+    "envConfig": {
+        "test": {
+          "targetServers": [
+		   {
+                "name" : "TSBankEnd1",
+                "host" : "mocktarget.apigee.net",
+                "isEnabled" : true,
+				"port" : 80
+
+			}
+		  ],
+          "caches": [],
+          "resourcefiles":[],
+          "flowhooks":[],
+		  "kvms" :[
+		{
+			   "name": "EnvConfigMap",
+			   "encrypted": false,
+			   "entry":    [
+				  {
+					 "name": "API-Proxy-Template",
+					 "value": "INFO,Y,Y"
+				  },
+				  {
+					 "name": "API2",
+					 "value": "ERROR,Y,Y"
+				  }
+				]
+		  },
+		  {
+			   "name": "EnvSecureMap",
+			   "encrypted": true,
+			   "entry":    [
+				  {
+					 "name": "secret",
+					 "value": "value"
+				  },
+				  {
+					 "name": "encryptionKey",
+					 "value": "value"
+				  }
+				  
+
+				]
+		  }
+		  ]
+        }
+    }
+}

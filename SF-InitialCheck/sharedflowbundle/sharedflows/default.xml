@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>RF.AccessDenied</Name>
+        <Condition>(request.verb != "OPTIONS") and ((request.header.X-API-KEY = null) or (request.header.X-API-KEY = ""))</Condition>
+    </Step>
+    <Step>
+        <Name>VK.VerifyAPIKey</Name>
+        <Condition>(request.verb != "OPTIONS")</Condition>
+    </Step>
+    <Step>
+        <Name>SA.RateLimit</Name>
+    </Step>
+    <Step>
+        <Name>RE.RegExCheck</Name>
+    </Step>
+    <Step>
+        <Name>RF.MethodNodAllowed</Name>
+        <Condition>(request.verb != "GET") and (request.verb != "POST") and (request.verb != "PUT") and (request.verb != "DELETE") and (request.verb != "OPTIONS")</Condition>
+    </Step>
+    <Step>
+        <Name>RF.BadRequest</Name>
+        <Condition>(request.verb = "POST" or request.verb = "PUT") and (request.content = "")</Condition>
+    </Step>
+    <Step>
+        <Name>RF.BadRequest</Name>
+        <Condition>(request.verb = "POST" or request.verb = "PUT") and (request.header.Content-Type != "application/json")</Condition>
+    </Step>
+    <Step>
+        <Name>JS.CreateMessageId</Name>
+    </Step>
+</SharedFlow>

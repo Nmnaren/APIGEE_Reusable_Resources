@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="EV.SecurityParams" version="SHA-512:0ea8405f3525ae297e764a883075976de389e0ab7a24b784797423dd4bc98976465d17fe5f1fb8d35373e2a73505f63e005a52c718e3a13b70a1fad14f5a7269"/>
+        <VersionInfo resourceName="JWT.VerifyToken" version="SHA-512:43a349956483641302c59f5c78036fd8b0df870dd38364b98785a5ee7cb1c039bfdf69a68d9f10606962fcca329bc60c59005220ef255b31b9fbcf73d242b63a"/>
+        <VersionInfo resourceName="KVM.ReadSecConfig" version="SHA-512:7032f18cc4d8e2e36d74f52f60b6b7808e62c53f9846268432c93a7286329aae5ab2c4410c00eb08617a525d44549513b69262615525e5f7f35647f1ee2db1ca"/>
+        <VersionInfo resourceName="RF.InvalidToken" version="SHA-512:b2e944c4a1dad0122d770ed5eccc6c4a6d80d3116c4b1e67176438c4e8eb3f979e410ec011207ad527013313857f6831efcc8c8c7e357b90e05a17d95559c55d"/>
+    </Policies>
+    <ProxyEndpoints/>
+    <Resources/>
+    <SharedFlows>
+        <VersionInfo resourceName="default" version="SHA-512:e8717bcde50e92d2296ca375ab64df5559a4c634406567bf92b2ba29273d45b6a40d541b514eb85cac73b5f8b8c09ef5a2ead7f7826ab0f7de661c3291d6cbb1"/>
+    </SharedFlows>
+    <TargetEndpoints/>
+</Manifest>

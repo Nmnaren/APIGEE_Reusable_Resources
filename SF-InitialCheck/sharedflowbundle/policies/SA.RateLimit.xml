@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SpikeArrest name="SA.RateLimit" enabled="true" continueOnError="false" async="false">
+    <DisplayName>SA.RateLimit</DisplayName>
+    <Properties/>
+    <Rate>5ps</Rate>
+</SpikeArrest>

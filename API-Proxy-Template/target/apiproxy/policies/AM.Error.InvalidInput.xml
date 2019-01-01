@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM.Error.InvalidInput">
+    <DisplayName>AM.Error.InvalidInput</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>flow.err.code</Name>
+        <Value>API-ERR-1001</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.description</Name>
+        <Value>Invalid input</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.httpStatusCode</Name>
+        <Value>400</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.reasonPhrase</Name>
+        <Value>Bad Request</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

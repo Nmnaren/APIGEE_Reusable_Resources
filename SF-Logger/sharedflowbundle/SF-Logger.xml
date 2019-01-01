@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="1" name="SF-Logger">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1545710533876</CreatedAt>
+    <CreatedBy>priniren@gmail.com</CreatedBy>
+    <Description>Shared Flow for logging</Description>
+    <DisplayName>SF_Logger</DisplayName>
+    <LastModifiedAt>1545717389054</LastModifiedAt>
+    <LastModifiedBy>priniren@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:b25194ce765ea13b84c0ac204fbc8e1a155a0becdef4180ed6f89381bc241c42043bdd81f3d5f5894c11b156cc5f1357b327167ca8ad55b445f44572f1b5cb08</ManifestVersion>
+    <Policies>
+        <Policy>JS.Logger</Policy>
+        <Policy>KVM.GetLogInfo</Policy>
+        <Policy>ML.LogMessage</Policy>
+        <Policy>RF.JSError</Policy>
+    </Policies>
+    <Resources>
+        <Resource>jsc://JS-Logger.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

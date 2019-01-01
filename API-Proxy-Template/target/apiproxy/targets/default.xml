@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description>Default target endpoint for the account related resources</Description>
+    <FaultRules>
+        <FaultRule name="GatewayTimeout">
+            <Step>
+                <Name>AM.Error.GatewayTimeout</Name>
+            </Step>
+            <Condition>(fault.name = "GatewayTimeout")</Condition>
+        </FaultRule>
+        <FaultRule name="ServiceUnavailable">
+            <Step>
+                <Name>AM.Error.ServiceUnavailable</Name>
+            </Step>
+            <Condition>(error.status.code = 503) or (fault.name = "NoActiveTargets") or (fault.name = "ServiceUnavailable")</Condition>
+        </FaultRule>
+        <FaultRule name="GenericError">
+            <Step>
+                <Name>AM.Error.Generic</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>AM.Req.Target.SaveParams</Name>
+            </Step>
+            <Step>
+                <Name>JS.SetContextFlow</Name>
+            </Step>
+            <Step>
+                <Name>FC.Logger</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <Name>FC.Logger</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <Flows/>
+    <HTTPTargetConnection>
+        <Properties>
+            <Property name="connect.timeout.millis">120000</Property>
+            <Property name="io.timeout.millis">120000</Property>
+        </Properties>
+        <LoadBalancer>
+            <Server name="TSBankEnd1"/>
+        </LoadBalancer>
+        <Path>/{flow.target.pathsuffix}</Path>
+    </HTTPTargetConnection>
+</TargetEndpoint>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM.Error.GatewayTimeout">
+    <DisplayName>AM.Error.GatewayTimeout</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>flow.err.code</Name>
+        <Value>API-ERR-1009</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.description</Name>
+        <Value>Request timed out</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.httpStatusCode</Name>
+        <Value>504</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.reasonPhrase</Name>
+        <Value>Gateway Timeout</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

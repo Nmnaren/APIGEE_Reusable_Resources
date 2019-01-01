@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="1" name="SF-Security-Check">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1545710563932</CreatedAt>
+    <CreatedBy>priniren@gmail.com</CreatedBy>
+    <Description>Shared Flow for Security Checks</Description>
+    <DisplayName>SF-Security-Check</DisplayName>
+    <LastModifiedAt>1545717335200</LastModifiedAt>
+    <LastModifiedBy>priniren@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:dac4dd9a037cfb2ef810a52fe04b66c5daf40972bd408e8e2ca35a878d2321dd49b0cade544e7fd92013940687b56e9a270d198e9bcac955d3085de5c33c6846</ManifestVersion>
+    <Policies>
+        <Policy>EV.SecurityParams</Policy>
+        <Policy>JWT.VerifyToken</Policy>
+        <Policy>KVM.ReadSecConfig</Policy>
+        <Policy>RF.InvalidToken</Policy>
+    </Policies>
+    <Resources/>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM.Error.ScriptExecutionFailed">
+    <DisplayName>AM.Error.ScriptExecutionFailed</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>flow.err.code</Name>
+        <Value>API-ERR-1010</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.description</Name>
+        <Value>Internal error</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.httpStatusCode</Name>
+        <Value>500</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>flow.err.reasonPhrase</Name>
+        <Value>Internal Server Error</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV.Request">
+    <DisplayName>EV.Request</DisplayName>
+    <Source>request</Source>
+    <JSONPayload>
+        <Variable type="string" name="firstName">
+            <JSONPath>$.firstName</JSONPath>
+        </Variable>
+        <Variable type="string" name="lastName">
+            <JSONPath>$.lastName</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <VariablePrefix>flow.request</VariablePrefix>
+</ExtractVariables>

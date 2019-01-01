@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessageLogging async="false" continueOnError="false" enabled="true" name="ML.LogMessage">
+    <DisplayName>ML.LogMessage</DisplayName>
+    <Syslog>
+        <Message>[43c8c809-976f-420e-b837-63ebe099bca8@41058 tag="apigee-edge" tag="{apiproxy.name}"] {syslog_message}</Message>
+        <Host>logs-01.loggly.com</Host>
+        <Port>514</Port>
+        <Protocol>TCP</Protocol>
+        <FormatMessage>true</FormatMessage>
+    </Syslog>
+    <logLevel>{logLevel}</logLevel>
+</MessageLogging>

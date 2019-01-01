@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KVM.GetLogInfo" mapIdentifier="EnvConfigMap">
+    <DisplayName>KVM.GetLogInfo</DisplayName>
+    <ExpiryTimeInSecs>86400</ExpiryTimeInSecs>
+    <Get assignTo="logLevel" index="1">
+        <Key>
+            <Parameter ref="apiproxy.name"/>
+        </Key>
+    </Get>
+    <Get assignTo="isLogHeaders" index="2">
+        <Key>
+            <Parameter ref="apiproxy.name"/>
+        </Key>
+    </Get>
+    <Get assignTo="isLogPayload" index="3">
+        <Key>
+            <Parameter ref="apiproxy.name"/>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>
