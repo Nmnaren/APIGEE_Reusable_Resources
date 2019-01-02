@@ -6,7 +6,7 @@
         <version>1.0</version>
         <relativePath>../Parent-Pom/pom.xml</relativePath>
     </parent>
-
+         <!-- comment -->
     <modelVersion>4.0.0</modelVersion>
     <groupId>mindtree</groupId>
     <artifactId>API-Proxy-Template</artifactId>
